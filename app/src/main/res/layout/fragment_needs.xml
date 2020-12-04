@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2019 xuexiangjys(xuexiangjys@163.com)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout style="@style/PullDownStyle">
+
+        <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <TextView
+                    style="@style/TextStyle.Title"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/title_needs"
+                    android:textColor="@color/title"
+                    android:textSize="30sp" />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/need_want"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/title_want" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/need_time"
+                    style="@style/InfoItem.Account"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/title_time" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/need_place"
+                    style="@style/InfoItem.Account"
+                    app:sLeftTextString="@string/title_place" />
+
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    style="@style/InfoItem.Account"
+                    app:sDividerLineType="none"
+                    app:sLeftTextString="@string/title_money" />
+
+                <com.xuexiang.xui.widget.textview.supertextview.SuperTextView
+                    android:id="@+id/menu_settings"
+                    style="@style/InfoItem.Account.NoEdit"
+                    android:layout_marginTop="20dp"
+                    app:sLeftTextString="@string/title_else" />
+
+                <com.xuexiang.xui.widget.edittext.MultiLineEditText
+                    android:id="@+id/edt_order_note_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:minLines="5"
+                    android:gravity="top"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"/>
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>
